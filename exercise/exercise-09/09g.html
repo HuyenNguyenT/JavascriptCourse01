@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>09g DOM Project Practice</title>
+</head>
+<body>
+<p>Amazon Shiping Calculator</p>
+<input placeholder="Cost of sorder"
+class="js-cost-input" 
+onkeydown="handleCostKeydown(event);">
+
+<button onclick="
+canculateTotal();
+">Calulate</button>
+
+<p class="js-total-cost"></p>
+
+<script>
+function handleCostKeydown(event) {
+    if(event.key === 'Enter') {
+    canculateTotal();
+  }
+}
+
+  function canculateTotal(){
+   const inputElement = document.querySelector('.js-cost-input');
+  let cost =  Number(inputElement.value);
+  console.log(cost);
+
+
+  if(cost < 40){
+    cost = (cost*100 + 1000)/100;
+  }
+  document.querySelector('.js-total-cost')
+  .innerHTML = `$${cost}`
+  }
+
+</script>
+</body>
+</html>

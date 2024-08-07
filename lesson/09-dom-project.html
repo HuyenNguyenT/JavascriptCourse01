@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>09 DOM Project</title>
+</head>
+<body>
+<p>YouTube Subcribe Button</p>
+<button onclick="
+subcribe();
+" class = "js-subcribe-button">Subcribe
+</button>
+
+
+<p>Amazon Shiping Calculator</p>
+<input placeholder="Cost of sorder"
+class="js-cost-input" 
+onkeydown="handleCostKeydown(event);">
+
+<button onclick="
+canculateTotal();
+">Calulate</button>
+
+<p class="js-total-cost"></p>
+
+<script>
+  String(25);
+  console.log('25' - 5);
+  console.log('25' + 5);
+
+
+  window.document
+  window.console.log(window)
+
+function handleCostKeydown(event) {
+    if(event.key === 'Enter') {
+    canculateTotal();
+  }
+}
+
+  function canculateTotal(){
+   const inputElement = document.querySelector('.js-cost-input');
+   //every elemnt in DOM will return value is tring, convert to number
+  let cost =  Number(inputElement.value);
+  console.log(cost);
+
+
+  if(cost < 40){
+    cost = cost +10;
+  }
+  document.querySelector('.js-total-cost')
+  .innerHTML = `$${cost}`
+  }
+
+
+  function subcribe(){
+    const buttonElement = document.querySelector('.js-subcribe-button');
+    if(buttonElement.innerText === 'Subcribe') {
+      buttonElement.innerHTML = 'Subcribed';
+    } else {
+      buttonElement.innerHTML = 'Subcribe';
+    } 
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>08 Practice</title>
+</head>
+<body>
+  
+  <script>
+    const product = {
+      basketball: 2095,
+      ['delivery-time'] : '3 days'
+    }
+    console.log(product.basketball);
+    product.basketball = product.basketball + 500;
+    console.log(product.basketball);
+    console.log(product['delivery-time']);
+
+    fun: function comparePrice(product1, product2){
+      let result = product1.price < product2.price ? product1 : product2;
+      return result;
+    }
+    let product1 = {
+      name : 'basketball',
+      price : 2000
+    };
+    let product2 = {
+      name : 'basketball',
+      price : 2001
+    }
+    console.log(comparePrice(product1,product2))
+    
+    fun: function isSameProduct(product1,product2){
+      if((product1.name === product2.name) && (product1.price === product2.price)){
+        return true;
+      }
+      return false;
+    }
+    console.log(isSameProduct(product1,product2));
+    console.log('Good Morning'.toLowerCase())
+    console.log('test'.repeat(2))
+  </script>
+</body>
+</html>

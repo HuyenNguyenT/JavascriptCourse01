@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>09f</title>
+</head>
+<body>
+  <input placeholder="Input your name" class="js-input" onkeydown="
+  if(event.key ==='Enter'){
+    messageDisplay();
+  }">
+  <button onclick="
+    messageDisplay();
+  ">Submit</button>
+  <p class="js-result">
+  </p>
+  <script>
+  function messageDisplay(){
+    let inputElement = document.querySelector('.js-input');
+    document.querySelector('.js-result').innerHTML = `Your name is: ${inputElement.value}`;
+  }
+  </script>
+</body>
+</html>

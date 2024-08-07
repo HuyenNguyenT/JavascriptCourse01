@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>09 - DOM</title>
+</head>
+<body>
+  <button>hello</button>
+  <button class="js-button">Second button</button>
+  <script>
+    //query all element on webpage then put in JS
+    //select button hello to JS
+    // console.log(document.querySelector('button'));
+    console.log(document.querySelector('button').innerHTML);
+    document.querySelector('button')
+    .innerHTML = 'Changed';
+
+    //select class = ., then class name
+    const buttonElement = document.querySelector('.js-button');
+    console.log(buttonElement);
+    /*
+    // set title of web page
+    document.title = 'DOM';
+
+    //document.body access body of page
+    console.log(document.body);
+    document.body.innerHTML = '<button>God job</button>';
+
+    */
+    
+
+
+  </script>
+</body>
+</html>

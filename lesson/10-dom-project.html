@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>10 DOM Project</title>
+  <style>
+     body {
+      font-family: Arial;
+    }
+
+    .subcribe-button{
+      border: none;
+      background-color: black;
+      color: white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-bottom: 30px;
+
+    }
+    
+    .is-subcribed {
+      background-color: rgb(240, 240, 240);
+      color: black;
+    }
+
+   .cost-input {
+    font-size: 15px;
+    /*
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    */
+    padding: 10px;
+   }
+
+   .calculate-button {
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 12px 15px;
+    cursor: pointer;
+
+   }
+
+  </style>
+</head>
+<body>
+<p>YouTube Subcribe Button</p>
+<button onclick="
+subcribe();
+" class = "js-subcribe-button subcribe-button">Subcribe
+</button>
+
+
+<p>Amazon Shiping Calculator</p>
+<input placeholder="Cost of sorder"
+class="js-cost-input cost-input" 
+onkeydown="handleCostKeydown(event);">
+
+<button onclick="
+canculateTotal();
+" class="calculate-button">Calulate</button>
+
+<p class="js-total-cost"></p>
+
+<script>
+
+function handleCostKeydown(event) {
+    if(event.key === 'Enter') {
+    canculateTotal();
+  }
+}
+
+  function canculateTotal(){
+   const inputElement = document.querySelector('.js-cost-input');
+   //every elemnt in DOM will return value is tring, convert to number
+  let cost =  Number(inputElement.value);
+  console.log(cost);
+
+
+  if(cost < 40){
+    cost = cost +10;
+  }
+  document.querySelector('.js-total-cost')
+  .innerHTML = `$${cost}`
+  }
+
+
+  function subcribe(){
+    const buttonElement = document.querySelector('.js-subcribe-button');
+
+    if(buttonElement.innerText === 'Subcribe') {
+      buttonElement.innerHTML = 'Subcribed';
+      buttonElement.classList.add('is-subcribed');
+    } else {
+      buttonElement.innerHTML = 'Subcribe';
+      buttonElement.classList.remove('is-subcribed');
+    } 
+  }
+</script>
+</body>
+</html>
