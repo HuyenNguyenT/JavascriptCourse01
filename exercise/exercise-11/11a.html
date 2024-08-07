@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>11a  </title>
+</head>
+<body>
+    <script>
+        /*
+        const myArr = [10,20,30,100];
+        myArr[2] = 99;
+        console.log(myArr);
+        const arrayInput = [];
+        function getLastValue(arrayInput) {
+                const index = arrayInput.length -1;
+                return arrayInput[index];
+            }
+
+        console.log(getLastValue(myArr));
+        const newArr = ['hi','hello','good'];
+        console.log(getLastValue(newArr));
+        
+        function arraySwap(arrayInput){
+            const tmp = arrayInput[0];
+            arrayInput[0] = arrayInput[arrayInput.length-1];
+            arrayInput[arrayInput.length - 1] = tmp;
+            return arrayInput;
+        }
+        console.log(arraySwap(myArr));
+        console.log(arraySwap(newArr));
+        const myArr1 = [1,20,22,24,5];
+        console.log(arraySwap(myArr1));
+        */
+
+        /*
+        let countEvn;
+        const evnArr = []; 
+        function countFirst10(){
+            let i = 0;
+            while(i <=10){
+                countEvn++;
+                evnArr.push(i);
+                i += 2;
+            }
+            return countEvn, evnArr;
+        }
+        console.log(countFirst10())
+        countEvn;
+        const newArray = [];
+        function countDow () {
+            for (let i = 5; i >= 0; i--){
+                countEvn++;
+                newArray.push(i);
+            }
+            return countEvn, newArray;
+        }
+        console.log(countDow())
+        */
+
+        const arrayInput = [];
+        const arrayOutput = [];
+
+        function createDoubleArr (arrayInput) {
+            for(let i = 0; i < arrayInput.length; i++) {
+                const index = arrayInput[i]*2;
+                arrayOutput.push(index);
+            }
+        }
+
+        let arrInp = [1,2,3];
+        console.log(createDoubleArr(arrInp));
+
+        </script>
+</body>
+</html>
