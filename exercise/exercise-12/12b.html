@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>12b</title>
+</head>
+<body>
+    <script>
+        function runTwice(param){
+            param();
+        }
+
+        runTwice (function(){
+            console.log(5);
+            console.log(5);
+        })
+       
+        const add = function(){
+            console.log(2+2);
+            console.log(2+2);
+        }
+
+        runTwice(add)
+    </script>
+</body>
+</html>

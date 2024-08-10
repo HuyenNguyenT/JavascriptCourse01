@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>12 Advanced Function</title>
+</head>
+<body>
+    <script>
+        /*
+        function greeting() {
+            console.log('hello')
+        }
+
+        greeting();
+
+        const num = 2;
+        const function1 = function greeting() {
+            console.log('hello');
+        }
+
+        console.log(function1);
+
+        console.log(typeof function1);
+
+        //anonymous function
+        const function2 = function() {
+            console.log('hello');
+        }
+
+        console.log(function2);
+        function2();
+
+        //hoisting 
+
+
+        const object1 = {
+            num: 2,
+            fun: function(){
+                console.log('hello3');
+            }
+        }
+
+        console.log(object1.num);
+        object1.fun();
+
+        function display(param) {
+            console.log(param)
+        }
+        display(2);
+
+        //passing a function
+        function run(param) {
+            param();
+        }
+        //callback function
+        run(function() {
+            console.log('hello4');
+        })
+*/
+//after 3000ms, functon setTimeout will call/run
+/*
+setTimeout(function() {
+    console.log('timeout');
+}, 3000);
+*/
+/*
+asynchronous Code: won't wait for
+a line to finish before going to the next line, setTimeout only set time
+go to console.log('next line'); immediately
+after 3000ms console.log('timeout'); execute
+some feature of Js like set timeout will asynchronous
+advance: don't block all code (hold all code after),
+set for back ground, contiunue do other thing while timer is running
+
+*/
+/*
+console.log('next line');
+*/
+/*
+synchronous code: will wait for one line to finish before going to 
+the next line, inside a function all code is synchronous 
+*/
+
+//setInterval is also asynchronous code
+/*
+setInterval(function() {
+    console.log('interval')
+}, 3000);
+
+console.log('next line 2')
+
+*/ 
+
+/*
+[
+    'make dinner',
+    'wash dishes',
+    'watch youtube'
+]. forEach(function(value){
+    console.log(value)
+});
+
+[
+    'make dinner',
+    'wash dishes',
+    'watch youtube'
+]. forEach(function(value, index){
+    console.log(index);
+    console.log(value);
+})
+*/
+[
+    'make dinner',
+    'wash dishes',
+    'watch youtube'
+]. forEach(function(value, index){
+    if(value === 'wash dishes') {
+        return;
+    }
+    console.log(index);
+    console.log(value);
+})
+    </script>
+</body>
+</html>

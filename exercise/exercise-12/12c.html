@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>12c</title>
+    <style>
+       .js-button,.button-finished {
+            background-color: green;
+            color: white;
+            border: none;
+            font-size: 15px;
+            padding: 25px 40px;
+            cursor: pointer;
+
+   }
+    </style>
+</head>
+<body>
+    <button onclick="
+        changeText();
+        " class="js-button"></button>
+    <script>
+        function changeText(){
+            setTimeout(function(){
+                document.querySelector('.js-button').innerHTML = 'Finnished!';
+                document.querySelector('.js-button').classList.add('button-finished')
+            },1000)
+        }
+    </script>
+</body>
+</html>
