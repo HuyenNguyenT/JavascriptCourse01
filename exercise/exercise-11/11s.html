@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>11s</title>
+</head>
+<body>
+    <script>
+        function removeEgg(foods) {
+            let result = [];
+            let count = 0;
+            for(let i = 0; i < foods.length; i++){
+                if(foods[i] === 'egg'){
+                    count++;
+                    if(count <=2){
+                        continue;
+                    } else {
+                        result.push(foods[i]);
+                    }
+                } else {
+                    result.push(foods[i])
+                }
+
+            }
+            return result;
+        }
+        console.log(removeEgg(['egg','apple','egg','egg','ham']));
+       
+        //from course solution, clean code, very talented
+        function removeEgg(foods) {
+            let result = [];
+            let count = 0;
+            for(let i = 0; i < foods.length; i++){
+                if(foods[i] === 'egg' && count < 2 ){
+                    count++;
+                    continue;
+                } 
+                result.push(foods[i])
+            }
+            return result;
+        }
+        console.log(removeEgg(['egg','apple','egg','egg','ham']));
+        
+    </script>
+</body>
+</html>

@@ -35,8 +35,6 @@ function addToList () {
     const duedateInputEl = document.querySelector('.js-due-date-input');
     const dueDate = duedateInputEl.value;
 
-
-
     todoList.push({
         // name: name,
         // dueDate: dueDate
