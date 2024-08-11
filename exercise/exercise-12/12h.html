@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>12h</title>
+    
+</head>
+<body>
+
+    <button onclick=" updateCartQuantity('.js-button-add')"  class="js-button-add">Add</button>
+    <button onclick=" updateCartQuantity('.js-button-remove')" class="js-button-remove">Remove</button>
+    <script>
+        let message = 2;
+
+        function updateCartQuantity(selector) {
+                const addButtonEle = document.querySelector(selector);
+                if(selector === '.js-button-add'){
+                    message += 1;
+                } else {
+                    message -= 1;
+                }
+    }
+
+            setInterval(function() {
+            if(document.title ==='App'){
+                document.title =`${message} New messages`;
+            } else {
+                document.title = 'App';
+            }
+                
+        }, 1000);
+
+    
+
+
+
+    </script>
+</body>
+</html>

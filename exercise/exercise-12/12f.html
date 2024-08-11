@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>12f</title>
+    <style>
+       .js-button,.button-finished {
+            background-color: green;
+            color: white;
+            border: none;
+            font-size: 15px;
+            padding: 25px 40px;
+            cursor: pointer;
+
+   }
+    </style>
+</head>
+<body>
+    <button onclick="
+       displayMessage();
+        " class="js-button">Add to card</button>
+        <div class="js-message-added"></div>
+    <script>
+        let timeoutId;
+        function displayMessage(){
+            document.querySelector('.js-message-added').innerHTML = 'Added';
+            clearTimeout(timeoutId);
+            setTimeout(function(){
+                document.querySelector('.js-message-added').innerHTML = '';
+            },2000)
+        }
+        
+
+    </script>
+</body>
+</html>

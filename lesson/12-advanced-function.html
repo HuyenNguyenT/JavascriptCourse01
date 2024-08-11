@@ -119,6 +119,49 @@ console.log('next line 2')
     console.log(index);
     console.log(value);
 })
+
+const arrowFunction = (param,param2) => {
+    console.log('hello');
+    return 5;
+};
+
+arrowFunction();
+
+const reqularFunction = function (param,param2) {
+    console.log('hello');
+    return 5;
+}
+
+const onePara = (param) => {
+    console.log(param+1);
+}
+
+onePara(2)
+
+const onLine = () =>  2+3;
+
+console.log(onLine());
+
+[
+    'make dinner',
+    'wash dishes',
+    'watch youtube'
+]. forEach((value, index) =>{
+    if(value === 'wash dishes') {
+        return;
+    }
+    console.log(index);
+    console.log(value);
+});
+
+const object2 = {
+    method: () => {
+
+    },
+    method() {
+        
+    }
+}
     </script>
 </body>
 </html>
