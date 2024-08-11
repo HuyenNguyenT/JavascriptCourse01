@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>12d</title>
+    <title>12p</title>
     <style>
        .js-button,.button-finished {
             background-color: green;
@@ -23,11 +23,14 @@
         " class="js-button"></button>
     <script>
         function changeText(){
-            setTimeout(function(){
+          document.querySelector('.js-button').innerHTML ='Loading..';
+
+            setTimeout(()=> {
                 document.querySelector('.js-button').innerHTML = 'Finnished!';
                 document.querySelector('.js-button').classList.add('button-finished')
             },1000)
         }
+        
     </script>
 </body>
 </html>

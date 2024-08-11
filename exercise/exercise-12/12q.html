@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>12d</title>
+    <title>12q</title>
     <style>
        .js-button,.button-finished {
             background-color: green;
@@ -15,19 +15,22 @@
     </style>
 </head>
 <body>
-    <button onclick="
-        // changeLoading();
-        changeText();
-        changeLoading();
-        
-        " class="js-button"></button>
+    <button 
+         class="js-button"></button>
     <script>
+        const buttonEle = document.querySelector('.js-button');
+        buttonEle.addEventListener('click',()=> {
+            changeText();
+        })
         function changeText(){
-            setTimeout(function(){
+          document.querySelector('.js-button').innerHTML ='Loading..';
+
+            setTimeout(()=> {
                 document.querySelector('.js-button').innerHTML = 'Finnished!';
                 document.querySelector('.js-button').classList.add('button-finished')
             },1000)
         }
+        
     </script>
 </body>
 </html>
